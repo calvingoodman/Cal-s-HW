@@ -6,14 +6,22 @@
  ******************************************************************************/
 import java.util.Scanner;
 
-public class counters
+public class shapes
 {
     public static void main(String[] args)
     {
-        for (int i=1;i <= 5; i++)
-        {
-            System.out.println(i*5);
-        }
+        Scanner KB = new Scanner(System.in);
+        
+        int a;
+        int b = 0;
+        System.out.println("Tell me how long you want the line to be");
+         a = KB.nextInt();
+        
+         for (int i=1;i <= a; i++)
+         {
+            System.out.print("*");
+         }
 
+           
     }
 }
