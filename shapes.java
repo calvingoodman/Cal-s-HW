@@ -13,15 +13,16 @@ public class shapes
         Scanner KB = new Scanner(System.in);
         
         int a;
-        int b = 0;
-        System.out.println("Tell me how long you want the line to be");
+        System.out.println("Tell me how big you want the base of the triangle to be");
          a = KB.nextInt();
         
-         for (int i=1;i <= a; i++)
-         {
-            System.out.print("*");
-         }
-
-           
+        for (int i= 1; i <= a; i++)
+        { 
+          for (int x = 1; x<=i; x++)
+          { 
+           System.out.print("* ");
+          }
+        System.out.println();
+        }
     }
 }
