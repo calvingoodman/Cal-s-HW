@@ -32,9 +32,9 @@ public static void main(String[] args)
 
         definitions = new String [number + 1];
 
-        for (int i=0; i <= number; i++)
+        for (int i=1; i <= number; i++)
         {
-            System.out.println("Now, enter the definition for word" + i++); 
+            System.out.printf("Now, enter the definition for word number " + i + ": \n"); 
                 definitions [i] = KB.nextLine();
         }
         
@@ -42,7 +42,7 @@ public static void main(String[] args)
 
 
         System.out.println(spellingWords [1]);
-        System.out.println(definitions [1]);
+        System.out.println(definitions [2]);
         
 
             
