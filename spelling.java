@@ -34,8 +34,8 @@ public static void main(String[] args)
 
         for (int i=1; i <= number; i++)
         {
-            System.out.printf("Now, enter the definition for word number " + i + ": \n"); 
-                definitions [i] = KB.nextLine();
+            System.out.printf("Now, enter the definition for word number " + i + ": ");
+                definitions [i] = KB.next() + KB.nextLine(); /*This solved the problem*/
         }
         
 
