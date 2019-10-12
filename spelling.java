@@ -4,6 +4,8 @@
    Programmer: Calvin Goodman
    Date Due:   9/11/2019
  ******************************************************************************/
+// Spelling Review Helper - user gives spelling words w/ definitions. 
+//  Definitions given back randomly - user must then spell word correctly.
 import java.util.Scanner;
 
 
@@ -14,10 +16,12 @@ public static void main(String[] args)
 
     {
         Scanner KB = new Scanner(System.in);
-
+        
+        int number; 
         String [] spellingWords;
         String [] definitions;
-        int number;
+        String answer;
+        String da;
 
         // Setting up word list w/ definitions
 
@@ -81,43 +85,23 @@ public static void main(String[] args)
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+    
+        public static void clearScreen() {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+        }
+        
         // Preliminaries out of the way!
         // Actual 'game' starts now
-        String answer;
-
-
-        System.out.println("Alright, you're all set!");
-
+       System.out.println("Alright, you're all set!"); 
+       
+       do
+        {
+        
 
         for (int i=1;i<=number;i++)
         {
-        System.out.println("What is: " + definitions [i] + "?");
+        System.out.println("What is: " + definitions [i] + "?"); //Here is where i think the randomization is needed
             answer = KB.next();
             if (answer.equals(spellingWords [i]))
             {
@@ -128,12 +112,11 @@ public static void main(String[] args)
                 System.out.println("Incorrect");
                 System.out.println("The correct way to spell it is: " + spellingWords [i]);
             }
-
-
         }
-        
-        
+            System.out.printf("Do you want to keep reviewing? (y/n): ");
+                da = KB.next();
 
+        } while (da.equals("y"));
             
 
 
