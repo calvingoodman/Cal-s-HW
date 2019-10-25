@@ -1,26 +1,40 @@
 /******************************************************************************
- CLASS INFORMATION                                    * Score: __________ *
+ CLASS INFORMATION                                    * Score: ______________ *
  -----------------                                    *************************
    Programmer: Calvin Goodman
-   Date Due:   9/11/2019
+   Date Due:   9/25/2019
  ******************************************************************************/
 import java.util.Scanner;
 
-
 public class array
 {
+    public static void main(String[] args)
+    {
+        Scanner KB = new Scanner(System.in);
 
-public static void main(String[] args)   
+        int howMany;
+        int sum = 0;
+        int [] grades;
 
-    {Scanner KB = new Scanner(System.in);
-        int [] numbers;
-        numbers = new int [3];
+        System.out.println("How many grade do u want me to get the sum and average of??");
+            howMany = KB.nextInt();
 
-        numbers[0] = 4;
-        numbers[1] = KB.nextInt();
-        numbers[2] = 9;
+            System.out.printf("grades\n", howMany);
+                
+                grades = new int [howMany];
 
-        System.out.println("The second number you entered was " + numbers[1]);
+            for (int i = 0; i < howMany; i++)
+            {
+            System.out.printf("Please enter grade number %d\n", i);
+                grades [i] = KB.nextInt();
+            }
 
+            for (int i = 0; i < howMany; i++)
+            {
+                sum += grades [i];
+            }
+
+            System.out.println("The sum of your numbers is " + sum);
+            System.out.println("The average is " + sum/howMany);
     }
 }
